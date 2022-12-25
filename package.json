@@ -1,15 +1,39 @@
 {
-  "name": "hardhat-javascript-starter",
+  "name": "@sharemint/contracts",
+  "description": "",
+  "version": "0.0.1",
+  "source": "typechain/index.ts",
+  "files": [
+    "/contracts/**/*.sol"
+  ],
   "scripts": {
     "build": "npx thirdweb@latest detect",
     "deploy": "npx thirdweb@latest deploy",
-    "release": "npx thirdweb@latest release"
+    "release": "npx thirdweb@latest release",
+    "test": "hardhat test",
+    "postinstall": "typechain",
+    "typechain": "hardhat typechain"
   },
   "devDependencies": {
-    "hardhat": "^2.10.1"
+    "@nomiclabs/hardhat-ethers": "^2.2.1",
+    "@typechain/ethers-v5": "^10.2.0",
+    "@typechain/hardhat": "^6.1.5",
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.11.17",
+    "chai": "^4.3.7",
+    "ethers": "^5.0.0",
+    "hardhat": "^2.12.4",
+    "mocha": "^10.2.0",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.1.1",
+    "typescript": "^4.9.4"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.0",
     "@thirdweb-dev/contracts": "^3"
+  },
+  "peerDependencies": {
+    "ethers": "^5.0.0"
   }
 }
